@@ -156,8 +156,8 @@ body {
     background-position: center;
     background-attachment: fixed;
     display: flex;
-    align-items: flex-start; /* Change from center to flex-start */
-    padding: 120px 5% 0; /* Add top padding to account for navbar */
+    align-items: flex-start; /* Change from flex-start to flex-end */
+    padding: 120px 5% 50px; /* Add bottom padding to create space */
     position: relative;
 }
 
@@ -450,14 +450,14 @@ body {
 }
 
 .contact-info a {
-    color: #fff; /* Default white color */
+    color: #fff; /* Match footer text color */
     text-decoration: none; /* Remove underline */
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
-    color: #aaa; /* Grey color on hover */
+    color: #ff7e5f; /* Add hover color for interactivity */
 }
 
 .copyright {
@@ -491,6 +491,10 @@ body {
 
     .mobile-menu {
         display: flex;
+    }
+
+    .hero {
+        padding-top: 150px; /* Add more space between navbar and hero content */
     }
 
     .hero-title {
@@ -542,8 +546,16 @@ body {
 
 @media (max-width: 480px) {
     .hero {
-        padding: 0 4%;
+        display: flex !important;
+        align-items: flex-start !important; /* Align items to the top */
+        justify-content: center !important; /* Center items horizontally */
+        padding: 20px 4% 50px !important; /* Adjust top padding for slight top-left positioning */
         background-attachment: scroll;
+    }
+
+    .hero-content {
+        max-width: 90%; /* Ensure content doesn't stretch too wide */
+        text-align: left; /* Align text to the left */
     }
 
     .hero-title {
